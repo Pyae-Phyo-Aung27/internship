@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 800px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            padding: 5px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(19, 21, 20);
+            color: white;
+            margin-top: 20px;
+        }
+
+        .nav-ul,
+        .nav-li {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 5px;
+        }
+
+        .feature-ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            margin: 0 50px 0 50px;
+            padding: 30px;
+        }
+
+        .feature-li {
+            background-color: rgb(224, 228, 228);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .two-sec {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-sec {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(250, 249, 248);
+            width: 48%;
+            border-radius: 10px;
+        }
+
+        .control {
+            margin: 10px;
+        }
+
+        .drop {
+            width: 92%;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        label {
+            margin: 10px 0 0 10px;
+        }
+
+         .right-sec {
+            width: 48%;
+            display: flex;
+            background-color: #dee8ed;
+            border-radius: 10px;
+            padding-bottom: 25px;
+        }
+
+        .right-sec-para {
+            background-color: #00a2ed;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            margin: 100px 60px;
+            font-size: small;
+            
+        }
+        .alex {
+            padding-bottom: 5px;
+        }
+        input {
+            background-color: #00a2ed;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding: 5px;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <!--Header-->
+        <header>
+            <h1>CSS Utility Simulator</h1>
+            <p>Change the inputs below to see how atomic classes combine to build UIs.</p>
+        </header>
+
+        <!--Navbar-->
+        <nav>
+            <h2>MyLogo</h2>
+            <ul class="nav-ul">
+                <li class="nav-li">Home</li>
+                <li class="nav-li">About</li>
+                <li class="nav-li">Contact</li>
+            </ul>
+        </nav>
+
+        <!--Feature-->
+        <ul class="feature-ul">
+            <li class="feature-li">Feature1</li>
+            <li class="feature-li">Feature2</li>
+            <li class="feature-li">Feature3</li>
+        </ul>
+
+        <!--Two Section-->
+        <div class="two-sec">
+
+            <!--Left Section-->
+            <div class="left-sec">
+                <h4 class="control">Utility Controls</h4>
+                <label for="">Padding (Spacing)</label>
+                <select class="drop">
+                    <option value="">Medium (P-8)</option>
+                </select>
+
+                <label for="">Background Theme (colors)</label>
+                <select class="drop">
+                    <option value="">Primary Blue</option>
+                </select>
+
+                <label for="">Text Size (Typography)</label>
+                <select class="drop">
+                    <option value="">Large (text-xl)</option>
+                </select>
+
+                <label for="">Conor Radius(Borders)</label>
+                <select class="drop">
+                    <option value="">Square (rounded-none)</option>
+                </select>
+
+                <label for="">Shadow (Depth)</label>
+                <select class="drop">
+                    <option value="">Medium (Shadow-md)</option>
+                </select>
+            </div>
+
+            <!--Right section-->
+            <aside class="right-sec">
+                <div class="right-sec-para">
+                    <h4 class="alex">alex Walker</h4>
+                    <p>
+                        Full-Stack Web Developer building
+                        awesome things with Tailwind CSS.
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+        <input type="button" name="" id="" value="Submit">
+        <input type="button" value="Hover Me Slowly!">
+    </div>
+
+</body>
+
+</html>

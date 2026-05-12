@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="icon"  type="image/png" href="butterfly.png"> -->
+    <link rel="icon"  type="image/png" href="flower.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(170, 167, 167);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        background-color: white;
+        width: 700px;
+        display: flex;
+        gap: 70px;
+        /* padding: 5%; */
+        margin:50px auto;
+        justify-content: center;
+        border-radius: 20px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .var {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dom {
+        /* flex: auto; */
+    }
+
+
+    .childdiv {
+        /* padding-top: 75px; */
+        border-radius: 10px;
+        background-color: rgb(248, 246, 250);
+        width: 200px;
+        height: 150px;
+        /* padding: 40px; */
+        border: 2px solid black;
+        /* position: fixed; */
+        /* text-align: center; */
+    }
+
+    .vip {
+        background-color: goldenrod;
+        border-radius: 40px;
+        width: 100px;
+        margin-left: 10px;
+        padding-left: 10px;
+        font-size: small;
+        margin-top: 10px;
+    }
+
+    .output {
+        padding-left: 12px;
+        margin-top: 0px;
+    }
+
+    .outputage {
+        padding-left: 10px;
+        padding-bottom: 20px;
+        margin-top: 50px;
+        position: fixed;
+    }
+
+    .color {
+        height: 12px;
+    }
+</style>
+<script>
+    document.getElementById("InputName");
+</script>
+
+<body>
+    <div class="container">
+        <!--left section-->
+        <section class="var">
+            <h2>Update Variables</h2>
+            <label for="inputName">Name (String):</label>
+            <input type="text" title="name" id="inputName">
+
+            <label for="inputAge">Age (Number):</label>
+            <input type="number" id="inputAge" title="age">
+
+            <label for="inputCheck">VIP(Boolean):</label>
+            <input type="checkbox" id="inputCheck" title="check">
+
+            <label for="inputColor">Card Color:</label>
+            <input type="color" id="inputColor" title="color" class="color">
+        </section>
+        <!--right section-->
+        <section class="dom">
+            <h2>Live DOM</h2>
+            <div class="childdiv" id="outputColor">
+                <p class="vip" id="vip"></p>
+                <h2 class="output" id="outputName"></h2>
+                <p class="outputage">Age: <span id="outputAge"></span></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const inputName = document.getElementById("inputName");
+        const inputAge = document.getElementById("inputAge");
+        const inputCheck = document.getElementById("inputCheck");
+        const inputColor = document.getElementById("inputColor");
+        const vip = document.getElementById("vip");
+        const outputName = document.getElementById("outputName");
+        const outputAge = document.getElementById("outputAge");
+
+        inputName.addEventListener('input',() => {
+            outputName.textContent = inputName.value;
+        });
+
+        inputAge.addEventListener('input',() => {
+            outputAge.textContent = inputAge.value;
+        });
+
+       inputCheck.addEventListener("change", () => {
+
+        if (inputCheck.checked) {
+            vip.textContent = "VIP Member";
+        } else {
+            vip.textContent = "";
+        }
+       });
+
+       inputColor.addEventListener('input',() => {
+            outputColor.style.backgroundColor = inputColor.value;
+        });
+
+        
+
+    </script>
+
+</body>
+
+</html>

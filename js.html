@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const score = 10;
+        // console.log(score);
+
+        // score =70;
+        // console.log(score);
+        // let num  = 35 ;
+        // console.log(typeof null);
+        // console.log(typeof undefined);
+
+        console.log (7 == "7") //True
+        console.log (7 === "7") //False
+        console.log (7 != "7") //False
+        console.log (7 !== "7") //True
+        console.log (7 <= "7") //True
+
+        console.log (7 + '7'); //77
+        console.log (name + "7") //7
+
+
+        const inputNumber1 = document.getElementById("inputNumber1");
+        const inputNumber2 = document.getElementById("inputNumber2");
+        const operator = document.getElementById("operator");
+        const calculateBtn = document.getElementById("calculateBtn");
+        const resultValue = document.getElementById("resultValue");
+
+
+        calculateBtn.addEventListener("click", () => {
+            const num1 = parseFloat(inputNumber1.value);
+            const num2 = parseFloat(inputNumber2.value);
+            let result;
+
+            switch (operator.value) {
+                case "+": result = num1 + num2; break;
+                case "-": result = num1 - num2; break;
+                case "*": result = num1 * num2; break;
+                case "/": result = num2 !== 0 ? num1 / num2 : "Error: Div by 0";
+                    break;
+            }
+
+            resultValue.textContent = result;
+        });
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    head
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
