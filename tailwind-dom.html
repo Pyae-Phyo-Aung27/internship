@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-200">
+    <!--Container-->
+    <div class="bg-white mx-auto w-2/4 mt-8 flex justify-center gap-8 rounded-lg">
+
+        <!--Left Section-->
+        <section class="flex flex-col gap-2 my-8">
+            <h1 class="font-bold text-2xl">Update Variables</h1>
+            <label for="name">Name (String):</label>
+            <input type="text" value="Alex Walker" title="name" id="name" class="w-full border border-gray-300 rounded-lg px-5 py-2 text-lg outline-none focus:ring-2 focus:ring-gray-300">
+            <label for="age">Age (Number):</label>
+            <input type="number" value="28" title="age" id="age" class="w-full border border-gray-300 rounded-lg px-5 py-2 text-lg outline-none focus:ring-2 focus:ring-gray-300">
+            <label for="">VIP Status(Boolean):</label>
+            <input type="checkbox">
+            <label for="">Card Color:</label>
+            <input type="color" class="h-4 border">
+        </section> 
+
+        <!--Right Section-->
+        <section class="my-8">
+            <h1 class="font-bold text-2xl">Live DOM Output</h1>
+            
+            <!-- child Section-->
+            <div class="border mt-4 rounded-lg p-4 ring-2">
+                <span class="bg-yellow-500 text-xs text-center p-1 rounded-2xl ring-1">VIP MEMBER</span>
+                <p>Alex Walker</p>
+                <p>Age: <span>28</span></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
